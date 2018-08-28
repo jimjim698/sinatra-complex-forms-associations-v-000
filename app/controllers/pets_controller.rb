@@ -30,7 +30,7 @@ class PetsController < ApplicationController
     erb :'/pets/show'
   end
 
-  patch '/pets/:id' do
+  post '/pets/:id' do
     raise params.inspect
 
     redirect to "pets/#{@pet.id}"
