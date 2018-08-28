@@ -21,7 +21,7 @@ class PetsController < ApplicationController
   end
 
   get '/pets/:id/edit' do
-    erb :'/pets/edit
+    erb :'/pets/edit'
   end
 
   get '/pets/:id' do
