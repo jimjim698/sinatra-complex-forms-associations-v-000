@@ -11,9 +11,9 @@ class PetsController < ApplicationController
   end
 
   post '/pets' do
-    binding.pry
+    
     @pet = Pet.create(params[:pet])
-    @pet.save 
+    @pet.save
 
 
     redirect to "pets/#{@pet.id}"
