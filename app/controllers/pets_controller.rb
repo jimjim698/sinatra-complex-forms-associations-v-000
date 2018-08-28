@@ -38,6 +38,7 @@ class PetsController < ApplicationController
       @pet.owner = Owner.create(params[:owner])
       @pet.save
     else
+      binding.pry
     @owner = Owner.find(params[:owner])
     @pet.owner = @owner
     @pet.save
