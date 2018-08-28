@@ -31,7 +31,7 @@ class PetsController < ApplicationController
   end
 
   post '/pets/:id' do
-    raise params.inspect
+    
     @pet = Pet.find(params[:id])
     @pet.update(params[:pet])
 
