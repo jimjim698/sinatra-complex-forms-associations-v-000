@@ -31,6 +31,7 @@ class PetsController < ApplicationController
   end
 
   patch '/pets/:id' do
+    raise params.inspect
 
     redirect to "pets/#{@pet.id}"
   end
