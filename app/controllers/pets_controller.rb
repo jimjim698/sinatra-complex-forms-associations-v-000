@@ -35,6 +35,8 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     @pet.update(params[:pet])
     @owner = Owner.find(params[:owner][:id])
+    @pet.owner = @owner 
+    @pet.save 
 
     redirect to "pets/#{@pet.id}"
   end
