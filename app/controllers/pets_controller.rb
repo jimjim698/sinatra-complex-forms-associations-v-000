@@ -31,7 +31,7 @@ class PetsController < ApplicationController
   end
 
   post '/pets/:id' do
-    raise params.inspect
+    
     @pet = Pet.find(params[:id])
     @pet.update(params[:pet])
     if !params[:owner][:name].empty?
@@ -41,7 +41,7 @@ class PetsController < ApplicationController
     @owner = Owner.find(params[:owner][:id])
     @pet.owner = @owner
     @pet.save
-  end 
+  end
 
     redirect to "pets/#{@pet.id}"
   end
