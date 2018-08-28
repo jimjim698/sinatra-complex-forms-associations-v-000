@@ -13,6 +13,7 @@ class PetsController < ApplicationController
   post '/pets' do
     binding.pry
     @pet = Pet.create(params[:pet])
+    @pet.save 
 
 
     redirect to "pets/#{@pet.id}"
