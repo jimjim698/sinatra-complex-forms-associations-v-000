@@ -31,11 +31,11 @@ class PetsController < ApplicationController
   end
 
   post '/pets/:id' do
-    raise params.inspect
+    
     @pet = Pet.find(params[:id])
     @pet.update(params[:pet])
     @owner = Owner.find(params[:owner][:id])
-    @pet.owner = @owner 
+    @pet.owner = @owner
     @pet.save 
 
     redirect to "pets/#{@pet.id}"
