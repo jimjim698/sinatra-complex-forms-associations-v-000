@@ -11,6 +11,8 @@ class PetsController < ApplicationController
   end
 
   post '/pets' do
+    raise params.inspect
+    
 
     redirect to "pets/#{@pet.id}"
   end
