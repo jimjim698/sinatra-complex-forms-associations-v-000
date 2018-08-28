@@ -11,9 +11,9 @@ class PetsController < ApplicationController
   end
 
   post '/pets' do
-    raise params.inspect
-    @pet = Pet.create(params[:pet])
     
+    @pet = Pet.create(params[:pet])
+
 
     redirect to "pets/#{@pet.id}"
   end
