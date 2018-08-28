@@ -38,7 +38,8 @@ class PetsController < ApplicationController
       @pet.owner = Owner.create(params[:owner])
       @pet.save
     else
-
+      raise params.inspect
+      
     @owner = Owner.find(params[:owner][:id])
     @pet.owner = @owner
     @pet.save
